@@ -49,6 +49,10 @@ public class Shooter extends SubsystemBase {
     compL.enableAnalog(setPressure - 10.0, setPressure);
   }
 
+  public boolean readyToFire() {
+    return !compL.isEnabled() && !compR.isEnabled();
+  }
+
   public void leftFire() {solenoidL.set(true);}
   
   public void rightFire() {solenoidR.set(true);}
@@ -64,8 +68,8 @@ public class Shooter extends SubsystemBase {
 
   @Override
   public void periodic() {
-    SmartDashboard.putBoolean("Comp Left On", compL.isEnabled());
-    SmartDashboard.putBoolean("Comp Right On", compR.isEnabled());
+    SmartDashboard.putBoolean("Comp On", readyToFire());
+
 
     SmartDashboard.putNumber("Left Pressure", hubL.getPressure(0));
     SmartDashboard.putNumber("RIght Pressure", hubR.getPressure(0));

@@ -23,17 +23,13 @@ public class FireCannon extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    // if (shooter.fireSide) {
-        shooter.leftFire();
-    // } else {
-        shooter.rightFire();
-    // }
+    shooter.leftFire();
+    shooter.rightFire();
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    shooter.switchTanks();
     shooter.closeSolenoids();
   }
 

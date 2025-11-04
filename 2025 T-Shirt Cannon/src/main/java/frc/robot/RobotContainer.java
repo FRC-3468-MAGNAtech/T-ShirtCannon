@@ -8,8 +8,6 @@ import frc.robot.Constants.OperatorConstants;
 import frc.robot.Constants.ShooterConstants;
 import frc.robot.commands.Autos;
 import frc.robot.commands.FireCannon;
-import frc.robot.commands.FireLeft;
-import frc.robot.commands.FireRight;
 import frc.robot.commands.SetTankPressure;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
