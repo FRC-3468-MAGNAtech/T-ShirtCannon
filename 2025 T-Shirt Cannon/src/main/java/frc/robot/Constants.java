@@ -29,8 +29,8 @@ public final class Constants {
         public static final int hubR = 2;
         public static final int rightSensor = 0;
         public static final int leftSensor = 1;
-        public static final double shortFire = 80.0;
-        public static final double medFire = 100.0;
+        public static final double shortFire = 60.0;
+        public static final double medFire = 90.0;
         public static final double longFire = 120.0;
         // public static final int rightCompRelay = ;
     }
