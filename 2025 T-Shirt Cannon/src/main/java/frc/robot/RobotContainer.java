@@ -53,7 +53,7 @@ public class RobotContainer {
         // Controls
         m_driveTrain.setDefaultCommand(
             new RunCommand( () -> m_driveTrain.arcadeDrive(
-                    -m_driverController.getLeftY(), -m_driverController.getRightX() * 0.5),
+                    -m_driverController.getLeftY(), -m_driverController.getRightX()),
                     m_driveTrain));
         
         shortFire.onTrue(new SetTankPressure(m_shooter, ShooterConstants.shortFire));
